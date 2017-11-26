@@ -9,16 +9,36 @@ class App extends Component {
   componentDidMount() {
     this.props.actions.getBusData();
   }
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      buses: [0]
+    }
+  }
+  
+  componentWillReceiveProps(props) {
+    if (props.buses[0] != this.state.buses[0]) {
+      this.setState({ buses: props.buses[0] });
+    }
+  }
+  
+  onButtonClick = () => {
+    console.log('buses: ', this.props.buses[0]);
+  }
 
   render() {
     return (
-      <Map />
+      <div>
+        <Map />
+        <button id='data_btn' onClick={this.onButtonClick}>click me for data</button>
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  data: state.data
+  buses: state.buses
 })
 
 const mapDispatchToProps = dispatch => ({
