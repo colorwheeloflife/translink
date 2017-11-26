@@ -20,6 +20,7 @@ class App extends Component {
   componentWillReceiveProps(props) {
     if (props.buses[0] != this.state.buses[0]) {
       this.setState({ buses: props.buses[0] });
+      setInterval(this.props.actions.getBusData(), 500);
     }
   }
 
