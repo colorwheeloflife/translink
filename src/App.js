@@ -22,16 +22,11 @@ class App extends Component {
       this.setState({ buses: props.buses[0] });
     }
   }
-  
-  onButtonClick = () => {
-    console.log('buses: ', this.props.buses[0]);
-  }
 
   render() {
     return (
       <div>
-        <Map />
-        <button id='data_btn' onClick={this.onButtonClick}>click me for data</button>
+        <Map buses={ this.state.buses }/>
       </div>
     );
   }
