@@ -7,6 +7,7 @@ const MAPBOX_KEY = process.env.REACT_APP_MAPBOX_API_TOKEN;
 export default class Map extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       viewport: {
         latitude: 49.2467,
@@ -17,7 +18,7 @@ export default class Map extends Component {
       }
     };
   }
-  
+
   _updateViewport = (viewport) => {
     this.setState({viewport});
   }
@@ -33,18 +34,18 @@ export default class Map extends Component {
       );
     }
   }
-    
+
   render() {
     const { viewport } = this.state;
     const { buses } = this.props;
-    
+
     return (
       <MapGL
         {...viewport}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         onViewportChange={this._updateViewport}
         mapboxApiAccessToken={ MAPBOX_KEY } >
-        
+
         { buses.map(this._renderBusMarker) }
       </MapGL>
     );

@@ -1,4 +1,4 @@
-import { FETCH_BUS_DATA } from './actions/index';
+import { FETCH_BUS_DATA } from '../actions/index';
 
 export default function(state = [], action) {
   switch (action.type) {
@@ -7,4 +7,3 @@ export default function(state = [], action) {
   }
   return state;
 }
-

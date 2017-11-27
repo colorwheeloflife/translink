@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
-import './App.css';
+import '../style/App.css';
 import Map from './map';
-import { getBusData } from './actions/index';
+import { getBusData } from '../actions/index';
 
 class App extends Component {
-  componentDidMount() {
-    this.props.actions.getBusData();
-  }
-  
   constructor(props) {
     super(props);
+
     this.state = {
       buses: [0]
     }
   }
-  
+
+  componentDidMount() {
+    this.props.actions.getBusData();
+  }
+
   componentWillReceiveProps(props) {
     if (props.buses[0] != this.state.buses[0]) {
       this.setState({ buses: props.buses[0] });
