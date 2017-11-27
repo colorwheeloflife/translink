@@ -9,9 +9,9 @@ Installation:
 Getting Started:
   This project has two start scripts to fire up. The first is for the client application. The second is for the server that do the calls to the Translink API.
 
-  1) In root directory, enter npm start to run.
+  1) In root directory, enter "npm start" to run.
 
-  2) Within the server directory, enter npm start to run.
+  2) Within the server directory, enter "npm start" to run.
 
   * This application is only built to operate in the development environment.
 
