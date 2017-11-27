@@ -7,7 +7,7 @@ Installation:
   After cloning the repo run "npm install" in the CLI to install dependency packages.
 
 Getting Started:
-  This project has two start scripts to fire up. The first is for the client application. The second is for the server that do the calls to the Translink API.
+  This project has two start scripts to fire up. The first is for the client application. The second is for the server that makes the calls to the Translink API.
 
   1) In root directory, enter "npm start" to run.
 
