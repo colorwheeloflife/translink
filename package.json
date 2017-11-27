@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
-    "immutable": "^3.8.2",
     "mapbox-gl": "^0.42.2",
     "npm": "^4.6.1",
     "react": "^16.1.1",
